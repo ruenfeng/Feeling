@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.feeling.AddActivity">
+
+    <ImageView
+        android:id="@+id/imageViewHappy"
+        android:layout_width="39dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginRight="108dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewNeutral"
+        app:layout_constraintEnd_toEndOf="@+id/editTextRemark"
+        app:layout_constraintTop_toTopOf="@+id/imageViewNeutral"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_sentiment_satisfied_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewSad"
+        android:layout_width="38dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="116dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewNeutral"
+        app:layout_constraintStart_toStartOf="@+id/editTextRemark"
+        app:layout_constraintTop_toTopOf="@+id/imageViewNeutral"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_sentiment_dissatisfied_red_24dp" />
+
+    <ImageView
+        android:id="@+id/imageViewNeutral"
+        android:layout_width="43dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="248dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewHappy"
+        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintStart_toEndOf="@+id/imageViewSad"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_sentiment_neutral_yellow_24dp" />
+
+    <EditText
+        android:id="@+id/editTextRemark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="@string/Remark"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewNeutral" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
